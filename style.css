@@ -1,39 +1,56 @@
 *{
 margin: 0;
 padding: 0;
-font-family:'Poppins', sans-serif;
+font-family:'Poppins', helvetica, sans-serif;
 box-sizing: border-box;
-
 }
 
 html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
     color: #fff;
+    background: #080808
+    
 }
 #header{
-    width:  100%;
-    height:  100vh;
+    width: 100%;
+    height: 100vh;
     background-image: url(images/img.png);
     background-size: cover;
     background-position: center;
-
 }
+#header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
 .container{
     padding: 10px 10%;
-
 }
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   
 }
+
+
 .logo{
-    width: 200px;
+    width: 100px;
 }
+
+.logo span{
+    color: #ff004f;
+}
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -47,9 +64,9 @@ position: relative;
 }
 nav ul li a::after{
 content: '';
-width: 0;
+width: 0%;
 height: 3px;
-background: #fff04f;
+background: #ff004f;
 position: absolute;
 left: 0;
 bottom: -6px;
@@ -60,7 +77,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 16%;
     font-size: 30px;
 }
 
@@ -69,10 +86,16 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }    
 .header-text h1 span{
-    color: #fff04f;
+    color: #ff004f;
 }
 .header-text p span{
-    color: #fff04f;
+    color: #ff004f;
+
+}
+
+.btn.btn1{
+    display: inline-block;
+    font-size: 20px;
 }
 
 /* -----------About-------------- */
@@ -80,6 +103,7 @@ nav ul li a:hover::after{
 #about{
     padding: 80px 0;
     color: #ababab;
+    z-index: 1;
 }
 .row{
     display: flex;
@@ -115,9 +139,9 @@ nav ul li a:hover::after{
 }
 .tab-links::after{
     content: '';
-    width: 0;
+    width: 0%;
     height: 3px;
-    background: #fff04f;
+    background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -131,7 +155,7 @@ nav ul li a:hover::after{
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color: #fff04f;
+    color:#ff004f;
     font-size: 14px;
 }
 .tab-contents{
@@ -175,7 +199,7 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 .services-list div:hover{
-    background-color: #ffff0f83;
+    background-color: #ff004f;
     transform: translateY(-10px);
 }
 
@@ -203,7 +227,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #fff04f);
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -224,7 +248,7 @@ nav ul li a:hover::after{
 }
 .layer a{
     margin-top: 20px;
-    color:#fff04f;
+    color:#ff004f;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -244,7 +268,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #fff04f;
+    border: 1px solid #ff004f;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -252,7 +276,7 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 .btn:hover{
-    background: #fff04f8a;
+    background: #ff004f;
 }
 
 /*-----------Contact------------*/
@@ -268,29 +292,28 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #fff04f;
+    color: #ff004f;
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 24px;
 }
 .social-icons{
     margin-top: 30px;
 }
 .social-icons a{
     text-decoration: none;
-     font-size: 30px;
-     margin-right: 15px;
-     color: #ababab;
-     display: inline-block;
-     transition: transform 0.5s;
+    font-size: 26px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
 }
 
+
 .social-icons a:hover{
-    color: #fff04f;
     transform: translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: #fff04fad;
+   
 }
 
 .btn.btn2:hover{
@@ -305,7 +328,7 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #fff04fc4;
+    background: #cccccc;
     padding: 15px;
     margin: 15px 0;
     color: #fff;
@@ -317,7 +340,9 @@ form .btn2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    background-color: #ff004f;
 }
+
 .copyright{
     width: 100%;
     text-align: center;
@@ -331,11 +356,11 @@ form .btn2{
     color: #ff004f;
 }
 
-/*---------CSS for Small Screen-------------*/
-
 nav .fas{
     display: none;
 }
+
+/*---------CSS for Small Screen-------------*/
 
 @media only screen and (max-width: 600px){
     #header{
@@ -343,17 +368,17 @@ nav .fas{
     }
     .header-text{
         margin-top: 100%;
-        font-size: 16px;
+        font-size: 14px;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 32px;
     }
     nav .fas{
         display: block;
         font-size: 25px;
     }
     nav ul{
-        background: #fff04fb0;
+        background: #ff004f;
         position: fixed;
         top: 0;
         right: -200px;
